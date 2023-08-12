@@ -1,6 +1,10 @@
 <?php
 
 require_once 'config.php';
+$connection = new mysqli($host, $user, $password, $database);
+if($connection->connect_error){
+    die('connection_error');
+}
 
 $query = "SELECT * FROM shop";
 
@@ -16,10 +20,13 @@ $rows = $result->num_rows;
 $result->data_seek(0); //Указывает на какой-то кусочек данных (в этом случае - на строку).
 
 echo '<pre>';
+// Вместо того, чтобы проверять в SQL запросе наличие данных внутри самой функции, можно вызывать ее только при условии, что данные существуют. Сократит лишние телодвижения.
+insertValues();
 printTable();
 echo '</pre>';
 
 function insertValues(){
+    global $connection;
     $insertValues = [
         $names = [
             'ship',
@@ -36,7 +43,8 @@ function insertValues(){
     ];
 
     for($i = 0; $i < 2; $i++){
-        $query = "INSERT IGNORE INTO shop (name, amount, price) VALUES ('" . $insertValues[0][$i] . "', " . $insertValues[1][$i] . ", " . $insertValues[2][$i] . ")";
+        $query = "INSERT INTO shop (name, amount, price) SELECT '" . $insertValues[0][$i] . "', " . $insertValues[1][$i] . ", " . $insertValues[2][$i] . "
+        WHERE NOT EXISTS (SELECT 1 FROM shop WHERE name = '" . $insertValues[0][$i] . "')";
         $result = mysqli_query($connection, $query);
         if (!$result) {
             die("Query failed: " . mysqli_error($connection));
