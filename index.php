@@ -22,7 +22,7 @@
                     <li><a href="">О Нас</a></li>
                     <li><a href="">Услуги</a></li>
                     <li>
-                        <i class="fa-solid fa-user"></i> <a href="">Кабинет</a>
+                        <a href=""><i class="fa-solid fa-user"></i> Кабинет</a>
                         <ul>
                             <li><a href="">Админ Панель</a></li>
                             <li><a href="">Выход</a></li>

@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,700;1,400;1,600&family=Oswald&family=Ysabeau+SC:wght@200;300;700&display=swap');
+/*Лучше все называть классами ибо хрен поймешь что такое header ul li a.*/
 *{
-    font-family: 'Montserrat';
+    font-family: 'Courier New', Courier, monospace;
 }
 html{
     color: #5c5b5b;
@@ -11,9 +11,13 @@ body{
 a{
     text-decoration: none;
     color: inherit;
+    border-radius: 5px;
+    padding: 3px;
+    border: 1px solid transparent
 }
 a:hover{
-    text-decoration: underline;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
 }
 
 header{
@@ -30,11 +34,15 @@ header ul{
     margin: 0;
     padding: 0;
     list-style-type: none;
+    float: right;
 }
 header ul li{
     float: left;
-    position: relative;
+    /* position: ; */
+    margin: 20px;
 }
 header ul li a{
     display: block;
+    font-size: 1.2rem;
+    color: #fff;
 }
