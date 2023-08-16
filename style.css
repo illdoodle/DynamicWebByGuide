@@ -19,6 +19,24 @@ a:hover {
     background-color: #006669;
     color: white;
 }
+input {
+    padding: 10px 12px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ececec;
+    line-height: 1.5rem;
+    color: #444;
+}
+textarea {
+    padding: 10px 12px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ececec;
+    line-height: 1.5rem;
+    color: #444;
+}
 
 header {
     background: #088484;
@@ -93,5 +111,53 @@ header ul li ul li a {
 }
 .carousel a:hover {
     background-color: #008489;
+    color: white;
+}
+
+.far::before {
+    margin-right: 5px;
+}
+.post {
+    margin-bottom: 10px;
+}
+.post-text {
+    border-radius: 5px;
+    background: white;
+}
+.search{
+    margin-top: 45px;
+}
+.sidebar .section {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+.sidebar h3 {
+    border-bottom: 2px solid #888;
+}
+.topics a:hover {
+    padding-left: 10px;
+    transition: all 0.3s;
+}
+
+.footer {
+    background: #303036;
+    color: #ddd;
+    padding: 10px;
+}
+.contacts input{
+    margin-bottom: 5px;
+}
+.contact-input {
+    background: #1a1a1a;
+    border-color: #303036;
+}
+.contacts button {
+    color:white;
+}
+.contacts button:hover {
+    transition: 0.25s;
+    background-color: #006669;
     color: white;
 }
