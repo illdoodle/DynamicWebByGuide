@@ -1,12 +1,16 @@
 /*Лучше все называть классами ибо хрен поймешь что такое header ul li a.*/
 * {
     font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
 }
 html {
     color: #5c5b5b;
+    height: 100%;
 }
 body {
     background: #f6f6f6;
+    height: 100%;
 }
 a {
     text-decoration: none;
@@ -114,6 +118,9 @@ header ul li ul li a {
     color: white;
 }
 
+.content {
+    min-height: calc(100vh - 80px);
+}
 .far::before {
     margin-right: 5px;
 }

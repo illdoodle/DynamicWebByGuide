@@ -36,75 +36,20 @@
 </header>
 
 <div class="container">
-    <div class="row">
-        <h2 class="slider-title">Топ Публикации</h2>
-    </div>
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/Tire.png" class="d-block w-100" alt="Tire.png">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a href="">First slide label</a></h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/DoublePizdec.png" class="d-block w-100" alt="DoublePizdec.png">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a href="">Second slide label</a></h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/Chasiki.png" class="d-block w-100" alt="Chasiki.png">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a href="">Third slide label</a></h5>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
-
-<div class="container">
     <div class="content row">
         <div class="main-content col-md-9 col-12">
-            <h2>Последние Публикации</h2>
-            <div class="post row">
-                <div class="img col-12 col-md-4">
+            <h2>Заголовок Конкретной Статьи</h2>
+            <div class="single-post row">
+                <div class="img col-12">
                     <img src="images/Chasiki.png" alt="Chasiki.png" class="img-thumbnail">
-                </div>
-                <div class="post-text col-12 col-md-8">
-                    <h2>
-                        <a href="singlePost.php">Заголовок</a>
-                    </h2>
+                </div>                
+                <div class="single-post-text col-12 col-md-8" style="margin: 10px; font-size: 1.2em;">
                     <i class="far fa-user">Имя Автора</i>
-                    <i class="far fa-calendar">01.01.1111</i>
-                    <p class="preview-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, repudiandae. 
-                        Suscipit adipisci quos recusandae dolor ex, quae in aspernatur incidunt.
-                    </p>
-                </div>
-            </div>
-            <div class="post row">
-                <div class="img col-12 col-md-4">
-                    <img src="images/Chasiki.png" alt="Chasiki.png" class="img-thumbnail">
-                </div>
-                <div class="post-text col-12 col-md-8">
-                    <h2>
-                        <a href="singlePost.php">Заголовок</a>
-                    </h2>
-                    <i class="far fa-user">Имя Автора</i>
-                    <i class="far fa-calendar">01.01.1111</i>
-                    <p class="preview-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, repudiandae. 
-                        Suscipit adipisci quos recusandae dolor ex, quae in aspernatur incidunt.
-                    </p>
+                    <i class="far fa-calendar">01.01.1111</i> <br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Omnis quidem tempora aspernatur hic beatae tempore corrupti. 
+                    Neque, odit! Minus quo alias laboriosam fugiat non. 
+                    Deleniti quam expedita doloribus nesciunt aspernatur?
                 </div>
             </div>
         </div>

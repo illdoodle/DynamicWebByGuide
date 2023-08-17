@@ -7,6 +7,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>My Blog</title>
+    <style>
+        .content {
+            margin-top: 15px;
+        }
+        .form-check-input {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
 <header class="container-fluid">
@@ -36,98 +44,39 @@
 </header>
 
 <div class="container">
-    <div class="row">
-        <h2 class="slider-title">Топ Публикации</h2>
-    </div>
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/Tire.png" class="d-block w-100" alt="Tire.png">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a href="">First slide label</a></h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/DoublePizdec.png" class="d-block w-100" alt="DoublePizdec.png">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a href="">Second slide label</a></h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/Chasiki.png" class="d-block w-100" alt="Chasiki.png">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a href="">Third slide label</a></h5>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
-
-<div class="container">
     <div class="content row">
-        <div class="main-content col-md-9 col-12">
-            <h2>Последние Публикации</h2>
-            <div class="post row">
-                <div class="img col-12 col-md-4">
-                    <img src="images/Chasiki.png" alt="Chasiki.png" class="img-thumbnail">
-                </div>
-                <div class="post-text col-12 col-md-8">
-                    <h2>
-                        <a href="singlePost.php">Заголовок</a>
-                    </h2>
-                    <i class="far fa-user">Имя Автора</i>
-                    <i class="far fa-calendar">01.01.1111</i>
-                    <p class="preview-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, repudiandae. 
-                        Suscipit adipisci quos recusandae dolor ex, quae in aspernatur incidunt.
-                    </p>
+        <form method="post" action="auth.php">
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Login</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputLogin3">
                 </div>
             </div>
-            <div class="post row">
-                <div class="img col-12 col-md-4">
-                    <img src="images/Chasiki.png" alt="Chasiki.png" class="img-thumbnail">
-                </div>
-                <div class="post-text col-12 col-md-8">
-                    <h2>
-                        <a href="singlePost.php">Заголовок</a>
-                    </h2>
-                    <i class="far fa-user">Имя Автора</i>
-                    <i class="far fa-calendar">01.01.1111</i>
-                    <p class="preview-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, repudiandae. 
-                        Suscipit adipisci quos recusandae dolor ex, quae in aspernatur incidunt.
-                    </p>
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3">
                 </div>
             </div>
-        </div>
-        <div class="sidebar col-md-3 col-12">
-            <div class="section search">
-                <h3>Search</h3>
-                <form action="index.php" method="post">
-                    <input type="text" name="search-term" class="text-input" placeholder="Search...">
-                </form>
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3">
+                </div>
             </div>
-            <div class="section topics">
-                <h3>Topics</h3>
-                <ul>
-                    <li><a href="">Perms</a></li>
-                    <li><a href="">Quotes</a></li>
-                    <li><a href="">Fiction</a></li>
-                    <li><a href="">Biography</a></li>
-                    <li><a href="">Motivation</a></li>
-                    <li><a href="">Inspiration</a></li>
-                    <li><a href="">Life Lessons</a></li>
-                </ul>
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Remember Me
+                        </label>
+                    </div>
+                </div>
             </div>
-        </div>
+            <button type="submit" class="btn btn-primary" name="login" formaction="do_login.php">Sign In</button>
+            <button type="submit" class="btn btn-primary" name="registration" formaction="do_registration.php">Sign Up</button>
+        </form>
     </div>
 </div>
 
