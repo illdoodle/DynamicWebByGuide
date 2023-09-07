@@ -1,3 +1,6 @@
+<?php 
+include 'app/include/header.php';
+?>
 <!doctype html>
 <head>
     <meta charset="utf-8">
@@ -18,43 +21,40 @@
 </head>
 <body>
 
-<?php 
-include 'app/include/header.php';
-?>
-
 <div class="container">
     <div class="content row">
-        <form method="post" action="auth.php">
+        <form method="post" action="auth.php" class="auth-form">
             <div class="row mb-3">
                 <label class="col-sm-2 col-form-label">Login</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputLogin3">
+                    <input type="text" class="form-control" id="inputLogin3" name="login">
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3">
+                    <input type="email" class="form-control" id="inputEmail3" name="email">
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3">
+                    <input type="password" class="form-control" id="inputPassword3" name="password">
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1" name="remember-me">
                         <label class="form-check-label" for="gridCheck1">
                             Remember Me
                         </label>
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" name="login" formaction="do_login.php">Sign In</button>
-            <button type="submit" class="btn btn-primary" name="registration" formaction="do_registration.php">Sign Up</button>
+            <!-- Если требуется action на эту же страницу то из идей какие то манипуляции с html тегом чтобы тот определял какая кнопка была нажата либо с помощью JS. -->
+            <button type="submit" class="btn btn-primary" name="login-button" formaction="<?php echo BASE_URL . 'auth/do_login.php' ?>">Log In</button>
+            <button type="submit" class="btn btn-primary" name="registration-button" formaction="<?php echo BASE_URL . 'auth/do_register.php' ?>">Register</button>
         </form>
     </div>
 </div>

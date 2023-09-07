@@ -1,5 +1,6 @@
 <?php 
-include 'path.php';
+$rootPath = realpath($_SERVER["DOCUMENT_ROOT"]);
+include "$rootPath/path.php";
 ?>
 <header class="container-fluid">
     <div class="container">
@@ -17,7 +18,7 @@ include 'path.php';
                     <li>
                         <a href=""><i class="fa-solid fa-user"></i> Кабинет</a>
                         <ul>
-                            <li><a href="">Админ Панель</a></li>
+                            <li><a href="<?php echo BASE_URL . 'auth.php' ?>">Админ Панель</a></li>
                             <li><a href="">Выход</a></li>
                         </ul>
                     </li>

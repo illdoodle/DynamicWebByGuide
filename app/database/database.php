@@ -19,7 +19,7 @@ function dbCheckError($query){
 $params = [
     'admin' => 0
 ];
-function selectAll($table, $params = [], $limitOne){
+function select($table, $params = [], $limitOne){
     global $pdo;
     $sql = "SELECT * FROM $table";
     if(!empty($params)){
@@ -42,10 +42,10 @@ function selectAll($table, $params = [], $limitOne){
     $query = $pdo->prepare($sql);
     $query->execute();
     dbCheckError($query);
-    return $query->fetchAll(); //Либо fetch (таблица, а не вся база)
+    return $query->fetch(); //Либо fetchAll (вся база, а не одна таблица)
 }
 
-// printArr(selectAll('users', $params, true));
+// printArr(select('users', $params, true));
 
 function resetId($table){
     global $pdo;
@@ -85,6 +85,7 @@ function insert($table, $params){
     $query = $pdo->prepare($sql);
     $query->execute($params);
     dbCheckError($query);
+    return $pdo->lastInsertId();
 }
 // insert('users', $insertData);
 
@@ -119,7 +120,7 @@ function delete($table, $id){
     $query->execute();
     dbCheckError($query);
 }
-delete('users', '4')
+// delete('users', '4')
 
 ?>
 <html lang="ru"></html>
